@@ -2,7 +2,7 @@ import { KnownErrors } from "./KnownErrors"
 
 export interface Error {
   code: KnownErrors,
-  message: string
+  message?: string
 }
 
 export interface Request {

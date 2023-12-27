@@ -29,7 +29,7 @@ export interface SignInResponse
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 
-export class GetSignInCodeTask
+export class GetSignInWithEmailCodeTask
   extends AsyncTask<
     GetSignInCodeRequest,
     GetSignInCodeResponse
@@ -48,7 +48,7 @@ export class GetSignInCodeTask
   }
 }
 
-export class SignInTask
+export class SignInWithEmailTask
   extends AsyncTask<
     SignInRequest,
     SignInResponse
