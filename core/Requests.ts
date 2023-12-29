@@ -1,7 +1,7 @@
-import { KnownErrors } from "./KnownErrors"
+import { KnownErrorCode } from "./KnownError"
 
 export interface Error {
-  code: KnownErrors,
+  code: KnownErrorCode,
   message?: string
 }
 

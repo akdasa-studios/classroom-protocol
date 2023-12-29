@@ -1,13 +1,6 @@
-import { KnownError } from "./KnownError";
-import { KnownErrors } from "./KnownErrors";
+import { KnownError, KnownErrorCode } from "./KnownError";
 import { Request, Response } from './Requests'
-import { Error } from './Requests'
 
-export interface AsyncTaskState {
-  isInProgress: boolean,
-  error?: Error
-  progress?: number
-}
 
 export interface IAsyncTask<
   TRequest extends Request,
@@ -32,7 +25,7 @@ export abstract class AsyncTask<
       return await this.onWork(request)
     } catch (error) {
       const errorDescription = {
-        code: error instanceof KnownError ? error.code : KnownErrors.UnknownError,
+        code: error instanceof KnownError ? error.code : KnownErrorCode.UnknownError,
         message: error as string
       }
       return {

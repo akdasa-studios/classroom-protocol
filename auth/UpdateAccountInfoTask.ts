@@ -1,6 +1,5 @@
-import { Request, Response } from '../core/Requests'
-import { AsyncTask } from '../core/AsyncTask'
-import { KnownErrors } from '../core/KnownErrors'
+import { Request, Response, AsyncTask, KnownErrorCode, sleep } from '../core'
+
 
 export interface UpdateAccountRequest
   extends Request
@@ -12,8 +11,6 @@ export interface UpdateAccountRequest
 export interface UpdateAccountResponse
   extends Response
 { }
-
-const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 
 export class UpdateAccountInfoTask
@@ -30,7 +27,7 @@ export class UpdateAccountInfoTask
     if (!request.name) {
       return {
         error: {
-          code: KnownErrors.UnknownError
+          code: KnownErrorCode.UnknownError
         }
       }
     }
@@ -38,7 +35,7 @@ export class UpdateAccountInfoTask
     if (!request.phoneNumber) {
       return {
         error: {
-          code: KnownErrors.UnknownError
+          code: KnownErrorCode.UnknownError
         }
       }
     }
