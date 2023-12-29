@@ -1,12 +1,14 @@
 import { KnownError, KnownErrorCode } from "./KnownError";
-import { Request, Response } from './Requests'
+import { CompletedResponse, Request, Response, ResponseCode } from './Requests'
 
 
 export interface IAsyncTask<
   TRequest extends Request,
   TResponse extends Response
 > {
-  execute(request: TRequest): Promise<TResponse>
+  execute(
+    request: TRequest
+  ): Promise<CompletedResponse<TResponse>>
 }
 
 export abstract class AsyncTask<
@@ -20,17 +22,18 @@ export abstract class AsyncTask<
 
   async execute(
     request: TRequest
-  ): Promise<TResponse> {
+  ): Promise<CompletedResponse<TResponse>> {
     try {
-      return await this.onWork(request)
-    } catch (error) {
-      const errorDescription = {
-        code: error instanceof KnownError ? error.code : KnownErrorCode.UnknownError,
-        message: error as string
-      }
       return {
-        error: errorDescription
-      } as TResponse
+        status: ResponseCode.Ok,
+        data: await this.onWork(request)
+      }
+    } catch (error) {
+      return {
+        status: ResponseCode.Error,
+        errorCode: error instanceof KnownError ? error.code : KnownErrorCode.UnknownError,
+        errorMessage: error as string
+      }
     }
   }
 }

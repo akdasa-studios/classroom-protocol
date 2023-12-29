@@ -1,4 +1,4 @@
-import { Request, Response, AsyncTask, KnownErrorCode, sleep } from '../core'
+import { Request, Response, AsyncTask, KnownErrorCode, sleep, KnownError } from '../core'
 
 
 export interface UpdateAccountRequest
@@ -25,19 +25,11 @@ export class UpdateAccountInfoTask
     await sleep(1000);
 
     if (!request.name) {
-      return {
-        error: {
-          code: KnownErrorCode.UnknownError
-        }
-      }
+      throw new KnownError(KnownErrorCode.UnknownError);
     }
 
     if (!request.phoneNumber) {
-      return {
-        error: {
-          code: KnownErrorCode.UnknownError
-        }
-      }
+      throw new KnownError(KnownErrorCode.UnknownError);
     }
 
     return { }

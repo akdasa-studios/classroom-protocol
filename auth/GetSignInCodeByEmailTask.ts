@@ -25,6 +25,6 @@ export class GetSignInCodeByEmailTask
       throw new KnownError(KnownErrorCode.InvalidEmail);
     }
 
-    return {};
+    return { };
   }
 }
