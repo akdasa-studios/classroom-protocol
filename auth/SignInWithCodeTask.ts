@@ -1,25 +1,25 @@
 import { AsyncTask, KnownError, KnownErrorCode, Request, Response, sleep } from '../core';
 
 
-export interface SignInRequest
+export interface SignInWithCodeRequest
   extends Request
 {
   code: string
 }
 
-export interface SignInResponse
+export interface SignInWithCodeResponse
   extends Response
 {
   registrationRequired: boolean
 }
 
-export class SignInWithEmailTask
+export class SignInWithCodeTask
   extends AsyncTask<
-    SignInRequest, SignInResponse
+    SignInWithCodeRequest, SignInWithCodeResponse
   > {
   protected async onWork(
-    request: SignInRequest
-  ): Promise<SignInResponse> {
+    request: SignInWithCodeRequest
+  ): Promise<SignInWithCodeResponse> {
     await sleep(1000);
 
     if (request.code == "2345") {

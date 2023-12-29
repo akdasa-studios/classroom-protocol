@@ -1,3 +1,3 @@
-export * from './GetSignInWithEmailCodeTask'
-export * from './SignInWithEmailTask'
+export * from './GetSignInCodeByEmailTask'
+export * from './SignInWithCodeTask'
 export * from './UpdateAccountInfoTask'

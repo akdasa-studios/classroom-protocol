@@ -1,24 +1,24 @@
 import { AsyncTask, KnownError, KnownErrorCode, Request, Response, sleep } from '../core'
 
-export interface GetSignInCodeRequest
+export interface GetSignInCodeByEmailRequest
   extends Request
 {
   email: string
 }
 
-export interface GetSignInCodeResponse
+export interface GetSignInCodeByEmailResponse
   extends Response
 { }
 
-export class GetSignInWithEmailCodeTask
+export class GetSignInCodeByEmailTask
   extends AsyncTask<
-    GetSignInCodeRequest,
-    GetSignInCodeResponse
+    GetSignInCodeByEmailRequest,
+    GetSignInCodeByEmailResponse
   >
 {
   protected async onWork(
-    request: GetSignInCodeRequest
-  ): Promise<GetSignInCodeResponse> {
+    request: GetSignInCodeByEmailRequest
+  ): Promise<GetSignInCodeByEmailResponse> {
     await sleep(1000);
 
     if (request.email != "test") {
