@@ -33,7 +33,7 @@ export class GetCourseDetailsTaskTask
 
     return {
       title: course.title,
-      description: course.description + loremIpsum,
+      description: course.description + loremIpsum + loremIpsum + loremIpsum,
       coverImageUrl: course.coverImageUrl
     }
   }
