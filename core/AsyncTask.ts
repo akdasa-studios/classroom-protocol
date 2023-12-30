@@ -1,4 +1,4 @@
-import { KnownError, KnownErrorCode } from "./KnownError";
+import { KnownError, KnownErrorCode } from './KnownError'
 import { CompletedResponse, Request, Response, ResponseCode } from './Requests'
 
 

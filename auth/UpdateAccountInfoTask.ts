@@ -22,14 +22,14 @@ export class UpdateAccountInfoTask
   protected async onWork(
     request: UpdateAccountRequest
   ): Promise<UpdateAccountResponse> {
-    await sleep(1000);
+    await sleep(1000)
 
     if (!request.name) {
-      throw new KnownError(KnownErrorCode.UnknownError);
+      throw new KnownError(KnownErrorCode.UnknownError)
     }
 
     if (!request.phoneNumber) {
-      throw new KnownError(KnownErrorCode.UnknownError);
+      throw new KnownError(KnownErrorCode.UnknownError)
     }
 
     return { }

@@ -1,4 +1,4 @@
-import { KnownErrorCode } from "./KnownError"
+import { KnownErrorCode } from './KnownError'
 
 /* -------------------------------------------------------------------------- */
 /*                                  Requests                                  */
@@ -7,6 +7,10 @@ import { KnownErrorCode } from "./KnownError"
 export interface Request {
 }
 
+export interface PaginatedRequest {
+  count: number
+  offset: number
+}
 
 /* -------------------------------------------------------------------------- */
 /*                                  Responses                                 */
@@ -18,6 +22,13 @@ export enum ResponseCode {
 }
 
 export interface Response {
+}
+
+export interface PaginatedResponse<
+  T
+> {
+  total: number
+  items: T[]
 }
 
 interface ResponseWithStatus
@@ -43,3 +54,4 @@ export interface FailedResponse
 
 export type CompletedResponse<T extends Response> =
   SucceededResponse<T> | FailedResponse
+

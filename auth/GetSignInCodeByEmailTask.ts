@@ -19,12 +19,12 @@ export class GetSignInCodeByEmailTask
   protected async onWork(
     request: GetSignInCodeByEmailRequest
   ): Promise<GetSignInCodeByEmailResponse> {
-    await sleep(1000);
+    await sleep(1000)
 
-    if (request.email != "test") {
-      throw new KnownError(KnownErrorCode.InvalidEmail);
+    if (request.email != 'test') {
+      throw new KnownError(KnownErrorCode.InvalidEmail)
     }
 
-    return { };
+    return { }
   }
 }
