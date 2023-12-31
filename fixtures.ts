@@ -1,4 +1,4 @@
-import { Course } from './courses'
+import { Course, Group } from './courses'
 
 export const courses: Course[] = [
   {
@@ -36,6 +36,26 @@ export const courses: Course[] = [
     description: 'Bhakti-vaibhava',
     coverImageUrl: 'https://prabhupadabooks.com/images/bhagavatam_big.jpg'
   },
+]
+
+
+export const groups: Group[] = [
+  {
+    id: 'abcdef',
+    courseId: 'QJuPZr',
+    name: 'Пранама (Матаджи)',
+    couratorName: 'Ямуна дд',
+    couratorAvatarUrl: 'http://placekitten.com/g/200/200',
+    startsAt: 17039772
+  },
+  {
+    id: 'bsdef',
+    courseId: 'QJuPZr',
+    name: 'Пранама (Прабху)',
+    couratorName: 'Кришна дас',
+    couratorAvatarUrl: 'http://placekitten.com/g/200/300',
+    startsAt: 17039772
+  }
 ]
 
 export const loremIpsum =

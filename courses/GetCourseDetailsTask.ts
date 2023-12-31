@@ -1,5 +1,5 @@
 import { AsyncTask, KnownError, KnownErrorCode, Request, Response, sleep } from '../core'
-import { courses, loremIpsum } from '../fixtures'
+import { courses, groups, loremIpsum } from '../fixtures'
 
 
 export interface GetCourseDetailsRequest
@@ -14,6 +14,7 @@ export interface GetCourseDetailsResponse
   title: string
   description: string
   coverImageUrl: string
+  isOpenToEnroll: boolean
 }
 
 export class GetCourseDetailsTaskTask
@@ -31,10 +32,13 @@ export class GetCourseDetailsTaskTask
       throw new KnownError(KnownErrorCode.UnknownError)
     }
 
+    const isOpenToEnroll = groups.some(x => x.courseId === request.id)
+
     return {
       title: course.title,
       description: course.description + loremIpsum + loremIpsum + loremIpsum,
-      coverImageUrl: course.coverImageUrl
+      coverImageUrl: course.coverImageUrl,
+      isOpenToEnroll: isOpenToEnroll
     }
   }
 }
