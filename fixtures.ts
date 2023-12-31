@@ -43,18 +43,26 @@ export const groups: Group[] = [
   {
     id: 'abcdef',
     courseId: 'QJuPZr',
-    name: 'Пранама (Матаджи)',
+    name: 'Группа для матаджи',
     couratorName: 'Ямуна дд',
-    couratorAvatarUrl: 'http://placekitten.com/g/200/200',
+    couratorAvatarUrl: 'https://avatar.iran.liara.run/public/52',
     startsAt: 17039772
   },
   {
     id: 'bsdef',
     courseId: 'QJuPZr',
-    name: 'Пранама (Прабху)',
+    name: 'Группа для прабху',
     couratorName: 'Кришна дас',
-    couratorAvatarUrl: 'http://placekitten.com/g/200/300',
+    couratorAvatarUrl: 'https://avatar.iran.liara.run/public/boy',
     startsAt: 17039772
+  },
+  {
+    id: 'fffff',
+    courseId: 'QJuPZr',
+    name: 'Группа 108',
+    couratorName: 'Радха дд',
+    couratorAvatarUrl: 'https://avatar.iran.liara.run/public/81',
+    startsAt: 17139772
   }
 ]
 
