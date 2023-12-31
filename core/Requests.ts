@@ -7,7 +7,7 @@ import { KnownErrorCode } from './KnownError'
 export interface Request {
 }
 
-export interface PaginatedRequest {
+export interface PaginatedRequest extends Request {
   count: number
   offset: number
 }
@@ -26,7 +26,7 @@ export interface Response {
 
 export interface PaginatedResponse<
   T
-> {
+> extends Response {
   total: number
   items: T[]
 }
