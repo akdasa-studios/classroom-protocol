@@ -4,8 +4,9 @@
 export enum KnownErrorCode {
   NoError = 'no.error',
   UnknownError = 'unknown',
-  InvalidEmail = 'invalid.email',
-  InvalidSignInCode = 'invalid.signin.code'
+  InvalidEmail = 'error-invalid-email',
+  InvalidSignInCode = 'error-invalid-signin-code',
+  InvalidValue = 'error-invalid-value'
 }
 
 /**
