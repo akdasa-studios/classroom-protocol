@@ -27,7 +27,7 @@ export const courses: Course[] = [
     title: 'Поклонение Божествам',
     subtitle: '',
     description: 'Archana',
-    coverImageUrl: 'http://www.prabhupadaconnect.com/Srila-Prabhupada-offering-ghee-lamp-to-Radha-Gokluananda-small.jpg'
+    coverImageUrl: 'https://sastracaksu.nlitn.in/wp-content/uploads/2018/02/Srila-Prabhupada-Praying-to-Radha-Krishna-Deities.jpg'
   },
   {
     id: 'Lqk4Ql',
