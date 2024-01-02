@@ -1,5 +1,5 @@
 export * from './KnownError'
-export * from './AsyncTask'
+export * from './Task'
 export * from './Requests'
 export * from './Utils'
 export * from './Cache'

@@ -1,8 +1,9 @@
 export interface Cache<
-  TKeyType,
-  TItemType
+  TModel,
+  TQuery,
 > {
-  add(key: TKeyType, item: TItemType): void;
-  get(key: TKeyType): TItemType | undefined;
-  invalidate(): void;
+  get(query: TQuery): Promise<TModel[]>
+  save(model: TModel[]): void
+  hash(query: TQuery): string
+  invalidate(): void
 }

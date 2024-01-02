@@ -2,35 +2,35 @@ import { Course, Group } from './courses'
 
 export const courses: Course[] = [
   {
-    id: 'QJuPZr',
+    id: 'a1',
     title: 'Пранама-мантра',
     subtitle: '',
     description: 'Pranama',
     coverImageUrl: 'https://sun9-80.userapi.com/impf/c840438/v840438487/1b36/0KaFwO7dpco.jpg?size=604x380&quality=96&sign=17a0e7c4e5233288c66b5c9172801240&type=album'
   },
   {
-    id: 'HlJqjE',
+    id: 'a2',
     title: 'Первое посвящение',
     subtitle: '',
     description: 'First Initiation',
     coverImageUrl: 'https://back2godhead.com/wp-content/uploads/2012/11/099_1975_10-02-27.jpg'
   },
   {
-    id: 'sNHRxm',
+    id: 'a3',
     title: 'Второе посвящение',
     subtitle: '',
     description: 'Second initiation',
     coverImageUrl: 'https://girirajswami.com/blog/wp-content/uploads/2012/07/SP_init.jpg'
   },
   {
-    id: 'S0b4m4',
+    id: 'a4',
     title: 'Поклонение Божествам',
     subtitle: '',
     description: 'Archana',
     coverImageUrl: 'https://sastracaksu.nlitn.in/wp-content/uploads/2018/02/Srila-Prabhupada-Praying-to-Radha-Krishna-Deities.jpg'
   },
   {
-    id: 'Lqk4Ql',
+    id: 'a5',
     title: 'Бхактивайбхава',
     subtitle: '',
     description: 'Bhakti-vaibhava',

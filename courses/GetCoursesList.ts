@@ -7,12 +7,12 @@ export interface Course {
   subtitle: string
   description: string
   coverImageUrl: string
-
 }
 
 export interface GetCoursesListRequest
   extends PaginatedRequest
 {
+  title?: string
 }
 
 export interface GetCoursesListResponse

@@ -2,7 +2,8 @@ import { KnownError, KnownErrorCode } from './KnownError'
 import { CompletedResponse, Request, Response, ResponseCode } from './Requests'
 
 
-export interface IAsyncTask<
+
+export interface ITask<
   TRequest extends Request,
   TResponse extends Response
 > {
@@ -11,10 +12,10 @@ export interface IAsyncTask<
   ): Promise<CompletedResponse<TResponse>>
 }
 
-export abstract class AsyncTask<
+export abstract class Task<
   TRequest extends Request,
   TResponse extends Response
-> {
+> implements ITask<TRequest, TResponse> {
 
   protected abstract onWork(
     request: TRequest
