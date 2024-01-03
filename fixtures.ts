@@ -4,7 +4,8 @@ export const courses: Course[] = [
   {
     id: 'a1',
     title: 'Пранама-мантра',
-    subtitle: '',
+    subtitle: 'Курс для получения пранама-мантры',
+    summary: 'Если вы хотите принять прибежище у Е.С. Бхакти Чайтанья Свами Махараджа, тогда вам необходимо ознакомиться с его требованиями к кандидатам на получение пранама-мантры и пройти данный курс',
     description: 'Pranama',
     coverImageUrl: 'https://sun9-80.userapi.com/impf/c840438/v840438487/1b36/0KaFwO7dpco.jpg?size=604x380&quality=96&sign=17a0e7c4e5233288c66b5c9172801240&type=album'
   },
@@ -12,6 +13,7 @@ export const courses: Course[] = [
     id: 'a2',
     title: 'Первое посвящение',
     subtitle: '',
+    summary: '',
     description: 'First Initiation',
     coverImageUrl: 'https://back2godhead.com/wp-content/uploads/2012/11/099_1975_10-02-27.jpg'
   },
@@ -19,6 +21,7 @@ export const courses: Course[] = [
     id: 'a3',
     title: 'Второе посвящение',
     subtitle: '',
+    summary: '',
     description: 'Second initiation',
     coverImageUrl: 'https://girirajswami.com/blog/wp-content/uploads/2012/07/SP_init.jpg'
   },
@@ -26,6 +29,7 @@ export const courses: Course[] = [
     id: 'a4',
     title: 'Поклонение Божествам',
     subtitle: '',
+    summary: '',
     description: 'Archana',
     coverImageUrl: 'https://sastracaksu.nlitn.in/wp-content/uploads/2018/02/Srila-Prabhupada-Praying-to-Radha-Krishna-Deities.jpg'
   },
@@ -33,6 +37,7 @@ export const courses: Course[] = [
     id: 'a5',
     title: 'Бхактивайбхава',
     subtitle: '',
+    summary: '',
     description: 'Bhakti-vaibhava',
     coverImageUrl: 'https://prabhupadabooks.com/images/bhagavatam_big.jpg'
   },
@@ -42,7 +47,7 @@ export const courses: Course[] = [
 export const groups: Group[] = [
   {
     id: 'abcdef',
-    courseId: 'QJuPZr',
+    courseId: 'a1',
     name: 'Группа для матаджи',
     couratorName: 'Ямуна дд',
     couratorAvatarUrl: 'https://avatar.iran.liara.run/public/52',
@@ -50,7 +55,7 @@ export const groups: Group[] = [
   },
   {
     id: 'bsdef',
-    courseId: 'QJuPZr',
+    courseId: 'a1',
     name: 'Группа для прабху',
     couratorName: 'Кришна дас',
     couratorAvatarUrl: 'https://avatar.iran.liara.run/public/boy',
@@ -58,7 +63,7 @@ export const groups: Group[] = [
   },
   {
     id: 'fffff',
-    courseId: 'QJuPZr',
+    courseId: 'a1',
     name: 'Группа 108',
     couratorName: 'Радха дд',
     couratorAvatarUrl: 'https://avatar.iran.liara.run/public/81',

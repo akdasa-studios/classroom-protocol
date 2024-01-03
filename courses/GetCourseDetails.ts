@@ -1,17 +1,14 @@
-import { Request, Response } from '../core'
+import { GetItemRequest, GetItemResponse } from '../core'
+import { Course } from './Course'
 
 
 export interface GetCourseDetailsRequest
-  extends Request
+  extends GetItemRequest
 {
-  id: string
 }
 
 export interface GetCourseDetailsResponse
-  extends Response
+  extends GetItemResponse<Course>
 {
-  title: string
-  description: string
-  coverImageUrl: string
-  isOpenToEnroll: boolean
 }
+

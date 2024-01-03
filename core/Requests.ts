@@ -7,7 +7,11 @@ import { KnownErrorCode } from './KnownError'
 export interface Request {
 }
 
-export interface PaginatedRequest extends Request {
+export interface GetItemRequest extends Request {
+  id: string
+}
+
+export interface GetItemsRequest extends Request {
   count: number
   offset: number
 }
@@ -24,11 +28,17 @@ export enum ResponseCode {
 export interface Response {
 }
 
-export interface PaginatedResponse<
-  T
+export interface GetItemResponse<
+  TModel
+> extends Response {
+  item: TModel
+}
+
+export interface GetItemsResponse<
+  TModel
 > extends Response {
   total: number
-  items: T[]
+  items: TModel[]
 }
 
 interface ResponseWithStatus

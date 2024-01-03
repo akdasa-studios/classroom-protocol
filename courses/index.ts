@@ -1,3 +1,4 @@
+export * from './Course'
 export * from './GetCoursesList'
 export * from './GetCourseDetails'
 export * from './GetEnrollmentDetails'

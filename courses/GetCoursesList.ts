@@ -1,21 +1,14 @@
-import { PaginatedRequest, PaginatedResponse } from '../core'
+import { GetItemsRequest, GetItemsResponse } from '../core'
+import { Course } from './Course'
 
-
-export interface Course {
-  id: string
-  title: string
-  subtitle: string
-  description: string
-  coverImageUrl: string
-}
 
 export interface GetCoursesListRequest
-  extends PaginatedRequest
+  extends GetItemsRequest
 {
   title?: string
 }
 
 export interface GetCoursesListResponse
-  extends PaginatedResponse<Course>
+  extends GetItemsResponse<Course>
 {
 }
