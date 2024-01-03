@@ -9,6 +9,8 @@ export interface GetCoursesListRequest
 }
 
 export interface GetCoursesListResponse
-  extends GetItemsResponse<Course>
+  extends GetItemsResponse<
+    Pick<Course, 'id'|'title'|'subtitle'|'summary'|'coverImageUrl'>
+  >
 {
 }
