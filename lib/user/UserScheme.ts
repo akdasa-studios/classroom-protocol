@@ -15,5 +15,15 @@ export interface GetUserResponse extends UserScheme {
 }
 
 export interface GetUsersResponse {
-  users: UserScheme[]
+  data: UserScheme[]
+}
+
+
+export interface UpdateUserRequest
+  extends Partial<Pick<UserScheme, 'name' | 'email' | 'roles' | 'status' | 'title' | 'department'>> {
+}
+
+export interface UpdateUserResponse {
+  success: boolean
+  message?: string
 }
