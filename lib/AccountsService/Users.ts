@@ -47,10 +47,10 @@ export interface GetUsersResponse {
 // update
 
 export interface UpdateUserRequest {
-  name: string
-  email: string
-  status: string
-  roles: string[]
+  name?: string
+  email?: string
+  status?: string
+  roles?: string[]
 	title?: string
 	department?: string
 	avatarUrl?: string
