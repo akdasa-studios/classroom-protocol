@@ -1,3 +1,11 @@
+export interface Role {
+  name: string
+  description: string
+  permissions: string[]
+}
+
+// create
+
 export interface CreateRoleRequest {
   name: string
   description: string
@@ -7,16 +15,8 @@ export interface CreateRoleRequest {
 export interface CreateRoleResponse {
 }
 
-export interface Role {
-  name: string
-  description: string
-  permissions: string[]
-}
 
-export interface GetRolesResponse {
-  id: string
-  items: Role[]
-}
+// get one
 
 export interface GetRoleResponse {
   id: string
@@ -25,6 +25,15 @@ export interface GetRoleResponse {
   permissions: string[]
 }
 
+
+// get all
+
+export interface GetRolesResponse {
+  items: Role[]
+}
+
+
+// update
 
 export interface UpdateRoleRequest {
   name?: string
