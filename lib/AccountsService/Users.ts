@@ -1,8 +1,10 @@
+export type UserStatus = 'invited' | 'active' | 'inactive'
+
 export interface User {
   id: string
   name: string
   email: string
-  status: string
+  status: UserStatus
   roles: string[]
   title?: string
   department?: string
@@ -29,7 +31,7 @@ export interface GetUserResponse {
   id: string
   name: string
   email: string
-  status: string
+  status: UserStatus
   roles: string[]
   title?: string
   department?: string
@@ -49,7 +51,7 @@ export interface GetUsersResponse {
 export interface UpdateUserRequest {
   name?: string
   email?: string
-  status?: string
+  status?: UserStatus
   roles?: string[]
 	title?: string
 	department?: string
