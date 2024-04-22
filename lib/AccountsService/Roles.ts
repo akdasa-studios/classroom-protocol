@@ -16,7 +16,7 @@ export interface GetRoleResponse {
 }
 
 
-export interface UpdateRoleResponse {
+export interface UpdateRoleRequest {
   name?: string
   description?: string
   permissions?: string[]
