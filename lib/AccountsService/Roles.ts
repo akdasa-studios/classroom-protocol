@@ -4,10 +4,23 @@ export interface CreateRoleRequest {
   permissions: string[]
 }
 
-export class CreateRoleResponse implements protocol.CreateRoleResponse {
+export interface CreateRoleResponse {
 }
 
 
-export class GetRoleResponse implements protocol.GetRoleResponse {
+export interface GetRoleResponse {
+  id: string
+  name: string
+  description: string
+  permissions: string[]
 }
 
+
+export interface UpdateRoleResponse {
+  name?: string
+  description?: string
+  permissions?: string[]
+}
+
+export interface UpdateRoleResponse {
+}
