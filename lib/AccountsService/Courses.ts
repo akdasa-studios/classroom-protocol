@@ -32,7 +32,7 @@ export interface GetCourseResponse {
 
 // get all
 
-export interface GetCourseResponse {
+export interface GetCoursesResponse {
   items: Course[]
 }
 
