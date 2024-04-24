@@ -8,9 +8,9 @@ export interface Lesson {
 // create
 
 export interface CreateLessonRequest {
-  name: string
-  description?: string
-  startsAt: number
+  courseId: string
+  title: string
+  description: string
 }
 
 export interface CreateLessonResponse {
@@ -37,7 +37,6 @@ export interface GetLessonsResponse {
 // update
 
 export interface UpdateLessonRequest {
-  courseId?: string
   title?: string
   description?: string
 }
