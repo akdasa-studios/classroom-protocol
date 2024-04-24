@@ -20,9 +20,10 @@ export interface CreateLessonResponse {
 // get one
 
 export interface GetLessonResponse {
-  name: string
-  description?: string
-  startsAt: number
+  id: string
+  courseId: string
+  title: string
+  description: string
 }
 
 
@@ -36,9 +37,9 @@ export interface GetLessonsResponse {
 // update
 
 export interface UpdateLessonRequest {
-  name?: string
+  courseId?: string
+  title?: string
   description?: string
-  startsAt?: number
 }
 
 export interface UpdateLessonResponse {
