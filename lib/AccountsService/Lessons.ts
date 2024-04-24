@@ -28,7 +28,7 @@ export interface GetLessonResponse {
 
 // get all
 
-export interface GeLessonsResponse {
+export interface GetLessonsResponse {
   items: Lesson[]
 }
 
