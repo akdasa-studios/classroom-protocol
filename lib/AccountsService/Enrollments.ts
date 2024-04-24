@@ -1,4 +1,4 @@
-export type EnrollmentStatus = 'not-submitted' | 'pending' | 'in-review' | 'approved' | 'declined' | 'graduated'
+export type EnrollmentStatus = 'new' | 'approved' | 'declined' | 'graduated'
 
 
 export interface Enrollment {
@@ -12,10 +12,8 @@ export interface Enrollment {
 // create
 
 export interface CreateEnrollmentRequest {
-  userId: string
   groupId?: string
   courseId: string
-  status: EnrollmentStatus
 }
 
 export interface CreateEnrollmentResponse {
@@ -35,7 +33,7 @@ export interface GetEnrollmentResponse {
 
 // get all
 
-export interface GetEnrollmentResponse {
+export interface GetEnrollmentsResponse {
   items: Enrollment[]
 }
 
@@ -45,7 +43,6 @@ export interface GetEnrollmentResponse {
 export interface UpdateEnrollementRequest {
  groupId?: string
  courseId?: string
- status?: EnrollmentStatus
 }
 
 export interface UpdateEnrollmentResponse {
