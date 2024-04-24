@@ -10,7 +10,6 @@ export interface Lesson {
 export interface CreateLessonRequest {
   name: string
   description?: string
-  leaderId: string
   startsAt: number
 }
 
@@ -23,7 +22,6 @@ export interface CreateLessonResponse {
 export interface GetLessonResponse {
   name: string
   description?: string
-  leaderId: string
   startsAt: number
 }
 
@@ -40,7 +38,6 @@ export interface GeLessonsResponse {
 export interface UpdateLessonRequest {
   name?: string
   description?: string
-  leaderId?: string
   startsAt?: number
 }
 
