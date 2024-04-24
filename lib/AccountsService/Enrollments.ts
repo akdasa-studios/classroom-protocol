@@ -40,7 +40,7 @@ export interface GetEnrollmentsResponse {
 
 // update
 
-export interface UpdateEnrollementRequest {
+export interface UpdateEnrollmentRequest {
  groupId?: string
  courseId?: string
 }
