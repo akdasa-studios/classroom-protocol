@@ -1,9 +1,11 @@
+import { CreateRequest } from "../Requests"
+
 export type EnrollmentStatus = 'new' | 'approved' | 'declined' | 'graduated'
 
 
-export interface Enrollment {
+export type Enrollment = {
   id: string
-  userId: string
+  applicantId: string
   groupId?: string
   courseId: string
   status: EnrollmentStatus
@@ -11,10 +13,7 @@ export interface Enrollment {
 
 // create
 
-export interface CreateEnrollmentRequest {
-  groupId?: string
-  courseId: string
-}
+export type CreateEnrollmentRequest = CreateRequest<Enrollment, 'groupId' | 'courseId'>;
 
 export interface CreateEnrollmentResponse {
 }
@@ -22,12 +21,8 @@ export interface CreateEnrollmentResponse {
 
 // get one
 
-export interface GetEnrollmentResponse {
-  id: string
-  userId: string
-  groupId?: string
-  courseId: string
-  status: EnrollmentStatus
+export interface GetEnrollmentResponse 
+  extends Enrollment {
 }
 
 
@@ -40,9 +35,8 @@ export interface GetEnrollmentsResponse {
 
 // update
 
-export interface UpdateEnrollmentRequest {
- groupId?: string
- courseId?: string
+export interface UpdateEnrollmentRequest 
+  extends Partial<Pick<Enrollment, 'groupId' | 'courseId' | 'status'>> {
 }
 
 export interface UpdateEnrollmentResponse {
