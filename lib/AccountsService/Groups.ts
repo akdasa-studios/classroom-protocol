@@ -1,4 +1,7 @@
-export interface Group {
+import { CreateRequest, CreateResponse } from "../Requests"
+import { Enrollment } from "./Enrollments"
+
+export type Group = {
   id: string
   name: string
   description?: string
@@ -8,15 +11,11 @@ export interface Group {
 
 // create
 
-export interface CreateGroupRequest {
-  name: string
-  description?: string
-  leaderId: string
-  startsAt: number
-}
+export type CreateGroupRequest = CreateRequest<
+  Group, 'name' | 'description' | 'leaderId' | 'startsAt'
+>
 
-export interface CreateGroupResponse {
-}
+export type CreateGroupResponse = CreateResponse<Group, 'id'>
 
 
 // get one
