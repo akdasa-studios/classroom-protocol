@@ -10,7 +10,7 @@ export interface Role {
 export interface CreateRoleRequest {
   name: string
   description: string
-  permissions: string[]
+  permissions?: string[]
 }
 
 export interface CreateRoleResponse {
@@ -23,7 +23,7 @@ export interface GetRoleResponse {
   id: string
   name: string
   description: string
-  permissions: string[]
+  permissions?: string[]
 }
 
 
