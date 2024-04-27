@@ -1,6 +1,6 @@
 export interface Lesson {
   id: string
-  course: string
+  courseId: string
   title: string
   description: string
 }
@@ -8,7 +8,7 @@ export interface Lesson {
 // create
 
 export interface CreateLessonRequest {
-  course: string
+  courseId: string  
   title: string
   description: string
 }
@@ -21,7 +21,7 @@ export interface CreateLessonResponse {
 
 export interface GetLessonResponse {
   id: string
-  course: string
+  courseId: string
   title: string
   description: string
 }
