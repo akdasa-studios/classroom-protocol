@@ -1,4 +1,4 @@
-import { CreateRequest } from "../Requests"
+import { CreateRequest } from "./Requests"
 
 export type EnrollmentStatus = 'new' | 'approved' | 'declined' | 'graduated'
 

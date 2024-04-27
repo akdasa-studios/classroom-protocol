@@ -1,5 +1,4 @@
-import { CreateRequest, CreateResponse } from "../Requests"
-import { Enrollment } from "./Enrollments"
+import { CreateRequest, CreateResponse } from "./Requests"
 
 export type Group = {
   id: string
