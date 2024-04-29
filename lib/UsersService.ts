@@ -5,7 +5,7 @@ export interface User {
   name: string
   email: string
   status: UserStatus
-  roles: string[]
+  roleIds: string[]
   title?: string
   department?: string
   avatarUrl?: string
@@ -32,7 +32,7 @@ export interface GetUserResponse {
   name: string
   email: string
   status: UserStatus
-  roles: string[]
+  roleIds: string[]
   title?: string
   department?: string
   avatarUrl?: string
