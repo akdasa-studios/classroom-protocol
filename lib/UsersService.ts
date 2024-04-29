@@ -52,7 +52,7 @@ export interface UpdateUserRequest {
   name?: string
   email?: string
   status?: UserStatus
-  roles?: string[]
+  roleIds?: string[]
 	title?: string
 	department?: string
 	avatarUrl?: string
