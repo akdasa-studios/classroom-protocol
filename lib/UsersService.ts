@@ -17,6 +17,7 @@ export interface CreateUserRequest {
   name: string
   email: string
   title?: string
+  roleIds: string[]
   department?: string
   avatarUrl?: string
 }
