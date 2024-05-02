@@ -1,9 +1,9 @@
-import { CreateRequest, CreateResponse } from "./Requests"
+import type { CreateRequest, CreateResponse } from "./Requests"
 
 export type Group = {
   id: string
   name: string
-  description?: string
+  description: string
   leaderId: string
   courseId: string
   startsAt: number
