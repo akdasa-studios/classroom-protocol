@@ -5,13 +5,14 @@ export type Group = {
   name: string
   description?: string
   leaderId: string
+  courseId: string
   startsAt: number
 }
 
 // create
 
 export type CreateGroupRequest = CreateRequest<
-  Group, 'name' | 'description' | 'leaderId' | 'startsAt'
+  Group, 'name' | 'description' | 'leaderId' | 'courseId' | 'startsAt'
 >
 
 export type CreateGroupResponse = CreateResponse<Group, 'id'>
@@ -24,6 +25,7 @@ export interface GetGroupResponse {
   name: string
   description?: string
   leaderId: string
+  courseId: string
   startsAt: number
 }
 
