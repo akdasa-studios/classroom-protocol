@@ -23,7 +23,7 @@ export type CreateGroupResponse = CreateResponse<Group, 'id'>
 export interface GetGroupResponse {
   id: string
   name: string
-  description?: string
+  description: string
   leaderId: string
   courseId: string
   startsAt: number
