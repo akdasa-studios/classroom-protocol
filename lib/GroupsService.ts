@@ -6,7 +6,7 @@ export type Group = {
   description: string
   leaderId: string
   courseId: string
-  startsAt: number
+  startsAt: Date
 }
 
 // create
@@ -26,7 +26,7 @@ export interface GetGroupResponse {
   description: string
   leaderId: string
   courseId: string
-  startsAt: number
+  startsAt: Date
 }
 
 
@@ -43,7 +43,8 @@ export interface UpdateGroupRequest {
   name?: string
   description?: string
   leaderId?: string
-  startsAt?: number
+  courseId?: string
+  startsAt?: Date
 }
 
 export interface UpdateGroupResponse {
