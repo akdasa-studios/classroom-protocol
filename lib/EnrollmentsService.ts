@@ -29,7 +29,13 @@ export interface GetEnrollmentResponse
 // get all
 
 export interface GetEnrollmentsResponse {
-  items: Enrollment[]
+  items: Array<{
+    id: string
+    status:    EnrollmentStatus
+    applicant: { id: string, name: string }
+    group:     { id: string, name: string }
+    course:    { id: string, title: string }
+  }>
 }
 
 
