@@ -25,7 +25,7 @@ export interface GetEnrollmentResponse {
   id: string,
   applicant: { id: string, name: string, avatarUrl?: string }
   course:    { id: string, name: string }
-  group:     { id: string, name: string }
+  group?:    { id: string, name: string }
   status:    EnrollmentStatus
 }
 
