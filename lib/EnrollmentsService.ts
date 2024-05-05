@@ -21,8 +21,12 @@ export interface CreateEnrollmentResponse {
 
 // get one
 
-export interface GetEnrollmentResponse 
-  extends Enrollment {
+export interface GetEnrollmentResponse {
+  id: string,
+  applicant: { id: string, name: string, avatarUrl?: string }
+  course:    { id: string, name: string }
+  group:     { id: string, name: string }
+  status:    EnrollmentStatus
 }
 
 
