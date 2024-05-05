@@ -32,7 +32,7 @@ export interface GetEnrollmentsResponse {
   items: Array<{
     id: string
     status:    EnrollmentStatus
-    applicant: { id: string, name: string }
+    applicant: { id: string, name: string, avatarUrl: string }
     group:     { id: string, name: string }
     course:    { id: string, title: string }
   }>
