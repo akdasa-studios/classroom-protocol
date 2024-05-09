@@ -14,6 +14,7 @@ export interface CreateRoleRequest {
 }
 
 export interface CreateRoleResponse {
+  id: string
 }
 
 

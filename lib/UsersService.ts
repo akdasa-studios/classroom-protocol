@@ -23,6 +23,7 @@ export interface CreateUserRequest {
 }
 
 export interface CreateUserResponse {
+  id: string
 }
 
 
