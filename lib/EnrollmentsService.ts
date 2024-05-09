@@ -13,7 +13,10 @@ export type Enrollment = {
 
 // create
 
-export type CreateEnrollmentRequest = CreateRequest<Enrollment, 'groupId' | 'courseId'>;
+export type CreateEnrollmentRequest = CreateRequest<Enrollment, 'groupId' | 'courseId'> & {
+  // Id is used to create a new enrollment on the client side and synced later.
+  id?: string
+}
 
 export interface CreateEnrollmentResponse {
 }
