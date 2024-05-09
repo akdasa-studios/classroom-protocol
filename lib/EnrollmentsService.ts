@@ -1,6 +1,6 @@
 import { CreateRequest } from "./Requests"
 
-export type EnrollmentStatus = 'new' | 'approved' | 'declined' | 'graduated'
+export type EnrollmentStatus = 'pending' | 'approved' | 'declined' | 'graduated'
 
 
 export type Enrollment = {
@@ -45,7 +45,7 @@ export interface GetEnrollmentsResponse {
 
 // update
 
-export interface UpdateEnrollmentRequest 
+export interface UpdateEnrollmentRequest
   extends Partial<Pick<Enrollment, 'groupId' | 'courseId' | 'status'>> {
 }
 
