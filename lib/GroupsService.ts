@@ -33,7 +33,14 @@ export interface GetGroupResponse {
 // get all
 
 export interface GetGroupsResponse {
-  items: Group[]
+  items: Array<{
+    id: string
+    name: string
+    description: string
+    leader: { id: string, name: string, avatarUrl: string }
+    course: { id: string, title: string }
+    startsAt: string
+  }>
 }
 
 
