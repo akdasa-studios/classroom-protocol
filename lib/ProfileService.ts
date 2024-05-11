@@ -1,4 +1,5 @@
 export type GetProfileResponse = {
+  id: string,
   name: string
   permissions: string[]
 }
