@@ -42,6 +42,7 @@ export interface GetEnrollmentsResponse {
     applicant: { id: string, name: string, avatarUrl: string }
     group:     { id: string, name: string }
     course:    { id: string, title: string }
+    declinedBy?: string
   }>
 }
 
