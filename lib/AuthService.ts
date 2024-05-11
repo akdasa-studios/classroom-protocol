@@ -4,6 +4,6 @@ export type AuthRequest = {
 }
 
 export type AuthResponse = {
-  access_token: string
+  accessToken: string
 }
 
