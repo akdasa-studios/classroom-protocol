@@ -5,5 +5,14 @@ export type AuthRequest = {
 
 export type AuthResponse = {
   accessToken: string
+  refreshToken: string
 }
 
+export type RefreshTokenRequest = {
+  refreshToken: string
+}
+
+export type RefreshTokenResponse = {
+  accessToken: string
+  refreshToken: string
+}
