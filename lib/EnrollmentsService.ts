@@ -1,4 +1,4 @@
-import { type CreateRequest } from "./Requests"
+import { type CreateRequest } from './Requests'
 
 export type EnrollmentStatus = 'pending' | 'approved' | 'declined' | 'graduated'
 
